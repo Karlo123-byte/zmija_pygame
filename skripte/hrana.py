@@ -4,6 +4,8 @@ class Hrana:
         self.izgled = izgled
         self.velicina = velicina
         self.pozicija = pozicija
+        self.slika = pygame.image.load("assets/slike/slika_hrane.png").convert_alpha()
+        self.slika = pygame.transform.scale(self.slika, (20, 20))
         
     def crtaj_hranu(self, ekran):
-        pygame.draw.rect(ekran, self.izgled, (self.pozicija[0], self.pozicija[1], self.velicina, self.velicina))
+        ekran.blit(self.slika, self.pozicija)
