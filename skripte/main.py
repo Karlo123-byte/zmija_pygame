@@ -17,7 +17,7 @@ mali_font = pygame.font.SysFont(None, 30)
 
 SEGMENT_SIRINA = 10
 SEGMENT_VISINA = 10
-brzina = 4.5
+brzina = 5
 start_x = 300
 start_y = 100
 
@@ -29,8 +29,8 @@ OVERLAY = (0, 0, 0, 180)
 
 
 def nova_pozicija_hrane():
-    x = random.randint(0, 800 - 20)
-    y = random.randint(0, 400 - 20)
+    x = random.randint(0, 800 - 40)
+    y = random.randint(0, 400 - 40)
     return (x, y)
 
 

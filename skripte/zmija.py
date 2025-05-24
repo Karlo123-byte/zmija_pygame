@@ -10,7 +10,7 @@ class Zmija:
         self.tijelo = pygame.image.load("assets/slike/slika_tijela.png").convert_alpha()
         self.rep = pygame.image.load("assets/slike/slika_repa.png").convert_alpha()
 
-        self.glava = pygame.transform.scale(self.glava, (self.segment_sirina, self.segment_visina))
+        self.glava = pygame.transform.scale(self.glava, (self.segment_sirina * 2, self.segment_visina * 2))
         self.tijelo = pygame.transform.scale(self.tijelo, (self.segment_sirina, self.segment_visina))
         self.rep = pygame.transform.scale(self.rep, (self.segment_sirina, self.segment_visina))
 
@@ -18,11 +18,11 @@ class Zmija:
 
     def rotiraj_sliku(self, slika, smjer):
         if smjer == (0, -1):
-            return pygame.transform.rotate(slika, 0)
+            return pygame.transform.rotate(slika, 180)
         elif smjer == (1, 0):
             return pygame.transform.rotate(slika, 90)
         elif smjer == (0, 1):
-            return pygame.transform.rotate(slika, 180)
+            return pygame.transform.rotate(slika, 0)
         elif smjer == (-1, 0):
             return pygame.transform.rotate(slika, 270)
         return slika
@@ -30,7 +30,9 @@ class Zmija:
     def crtaj_zmiju(self, ekran):
         glava_smjer = self.smjerovi[0]
         glava_slika = self.rotiraj_sliku(self.glava, glava_smjer)
-        ekran.blit(glava_slika, self.pozicija[0])
+        glava_rect = glava_slika.get_rect(center=(self.pozicija[0][0] + self.segment_sirina // 2,self.pozicija[0][1] + self.segment_visina // 2))
+                                           
+        ekran.blit(glava_slika, glava_rect)
 
         for i in range(1, len(self.pozicija) - 1):
             smjer = self.smjerovi[i]
