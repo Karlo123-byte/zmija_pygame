@@ -1,11 +1,12 @@
 import pygame
+
 class Hrana:
-    def __init__(self, izgled, velicina, pozicija):
-        self.izgled = izgled
-        self.velicina = velicina
-        self.pozicija = pozicija
+    def __init__(self, pozicija):
         self.slika = pygame.image.load("assets/slike/slika_hrane.png").convert_alpha()
-        self.slika = pygame.transform.scale(self.slika, (20, 20))
-        
+        self.slika = pygame.transform.scale(self.slika, (12, 12))
+        self.pozicija = pozicija
+
     def crtaj_hranu(self, ekran):
-        ekran.blit(self.slika, self.pozicija)
+        rect = self.slika.get_rect()
+        rect.center = self.pozicija
+        ekran.blit(self.slika, rect)
