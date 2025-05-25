@@ -18,8 +18,8 @@ mali_font = pygame.font.SysFont(None, 30)
 SEGMENT_SIRINA = 10
 SEGMENT_VISINA = 10
 brzina = 5
-start_x = 300
-start_y = 100
+start_x = 200 #300 # početna pozicija zmije
+start_y = 200 #100 # početna pozicija zmije
 
 
 CRNA = (0, 0, 0)
