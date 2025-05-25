@@ -1,15 +1,8 @@
-#Moram dodati score kada god zmija pojede jabuku dobije score +5 
-#Score pocinje sa 0
-#Score se prkazuje u gornjem desnom kutu dok korisnik igra
 
-import pygame
+#Trebam dodati drugu zmiju koja će biti protivnik
+#kontrola druge zmije je da se pomiče na strelice
 
-# Inicijalizacija fonta
-pygame.font.init()
-font = pygame.font.SysFont('Arial', 16)
+#polje za igru je 800x400
+#prvu zmiju treba stvroti na lijevoj strani
+#drugoj zmiji treba stvoriti na desnoj strani
 
-def prikazi_score(screen, score):
-    score_text = font.render(f"Score: {score}", True, (255, 255, 255))
-    # Prikaz u gornjem desnom kutu (prilagodite širinu ekrana po potrebi)
-    screen_width = screen.get_width()
-    screen.blit(score_text, (screen_width - score_text.get_width() - 10, 10))
