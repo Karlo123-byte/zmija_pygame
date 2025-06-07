@@ -12,3 +12,5 @@
 #trebam uzeti sve slike od zmije i prebaciti u zutu boju da zmiji promijenim boju  Rijesio
 
 #Dodati logiku ako se glava zmije sudari sa tijelom zmije ta zmija gubi i suprotno 
+
+#Slike su dodane
