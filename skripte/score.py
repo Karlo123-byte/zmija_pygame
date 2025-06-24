@@ -14,3 +14,5 @@
 #Dodati logiku ako se glava zmije sudari sa tijelom zmije ta zmija gubi i suprotno 
 
 #Slike su dodane
+
+#Rijesio sam sve 

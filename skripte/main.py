@@ -17,7 +17,7 @@ mali_font = pygame.font.SysFont(None, 30)
 
 SEGMENT_SIRINA = 10
 SEGMENT_VISINA = 10
-brzina = 5
+brzina = 4
 start_x = 200
 start_y = 200
 start_x1 = 400
@@ -126,7 +126,7 @@ while True:
         popup = pygame.Rect(200, 80, 400, 240)
         pygame.draw.rect(zaslon, SIVA, popup)
         pygame.draw.rect(zaslon, BIJELA, popup, 5)
-
+ 
         tekst = font.render("Game Over", True, BIJELA)
         pobjednik_tekst = mali_font.render(pobjednik, True, BIJELA)
         podtekst = mali_font.render("Pritisni SPACE da pokušaš ponovno!", True, BIJELA)
