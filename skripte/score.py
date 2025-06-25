@@ -16,3 +16,5 @@
 #Slike su dodane
 
 #Rijesio sam sve 
+
+#moj prvi commit 

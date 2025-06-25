@@ -107,7 +107,7 @@ while True:
         game_over = True
         pobjednik = "ČESTITAMO! Žuta zmija je pobjedila!"
 
-    # Sudar: žuta glava u tijelo plave
+    # Sudar: žuta glava u tijelo plave 
     if zmija1.pozicija[0] in zmija.pozicija[1:]:
         game_over = True
         pobjednik = "ČESTITAMO! Zelena zmija je pobjedila!"        
